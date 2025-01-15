@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.13.0 on win32)" generated="2025-01-07T21:28:20.488771" rpa="false" schemaversion="5">
+<suite id="s1" name="Amazon Testes Gherkin Bdd" source="C:\Users\Arley\Desktop\CursoUdemy\RobotFramework\WebTesting\amazon_testes_gherkin_bdd.robot">
+<test id="s1-t1" name="Caso de Teste 01 - Acesso ao menu &quot;Ofertas do Dia&quot;" line="9">
+<kw name="Abrir o navegador" owner="amazon_resources" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-01-07T21:28:20.701439" level="INFO">Opening browser 'chrome' to base url 'https://www.amazon.com.br/'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-01-07T21:28:20.701265" elapsed="2.020430"/>
+</kw>
+<status status="PASS" start="2025-01-07T21:28:20.700784" elapsed="2.021052"/>
+</kw>
+<kw name="Dado que estou na home page da Amazon.com.br" owner="amazon_resources">
+<kw name="Acessar a home page do site Amazon.com.br" owner="amazon_resources">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-01-07T21:28:22.722736" level="INFO">Opening url 'https://www.amazon.com.br/'</msg>
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-01-07T21:28:22.722595" elapsed="0.301379"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-07T21:28:25.024680" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-01-07T21:28:23.024136" elapsed="2.000642"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${MENU_OFERTASDIA}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-07T21:28:25.024929" elapsed="3.960776"/>
+</kw>
+<status status="PASS" start="2025-01-07T21:28:22.722430" elapsed="6.263395"/>
+</kw>
+<status status="PASS" start="2025-01-07T21:28:22.722175" elapsed="6.263697"/>
+</kw>
+<kw name="Quando acessar o menu &quot;Ofertas do dia&quot;" owner="amazon_resources">
+<kw name="Entrar no menu &quot;Ofertas do Dia&quot;" owner="amazon_resources">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-07T21:28:28.986662" level="INFO">Clicking element '//a[@href='/deals?ref_=nav_cs_gb'][contains(.,'Ofertas do Dia')]'.</msg>
+<arg>${MENU_OFERTASDIA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-07T21:28:28.986517" elapsed="1.247693"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-07T21:28:32.235167" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-01-07T21:28:30.234733" elapsed="2.000536"/>
+</kw>
+<status status="PASS" start="2025-01-07T21:28:28.986368" elapsed="3.248995"/>
+</kw>
+<status status="PASS" start="2025-01-07T21:28:28.986136" elapsed="3.249272"/>
+</kw>
+<kw name="Então deve aparecer na página a frase &quot;Ofertas e Promoções&quot;" owner="amazon_resources">
+<kw name="Verificar se aparece a frase &quot;Ofertas e Promoções&quot;" owner="amazon_resources">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Ofertas e Promoções</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-01-07T21:28:32.236085" elapsed="0.015229"/>
+</kw>
+<status status="PASS" start="2025-01-07T21:28:32.235929" elapsed="0.015465"/>
+</kw>
+<status status="PASS" start="2025-01-07T21:28:32.235702" elapsed="0.015738"/>
+</kw>
+<kw name="E o título da página deve ficar &quot;Ofertas e Promoções | Amazon.com.br&quot;" owner="amazon_resources">
+<kw name="Verificar se o título da página fica &quot;Ofertas e Promoções | Amazon.com.br&quot;" owner="amazon_resources" source_name="Verificar se o título da página fica &quot;${TITULO}&quot;">
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2025-01-07T21:28:32.254900" level="INFO">Page title is 'Ofertas e Promoções | Amazon.com.br'.</msg>
+<arg>${TITULO}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2025-01-07T21:28:32.252064" elapsed="0.002895"/>
+</kw>
+<status status="PASS" start="2025-01-07T21:28:32.251900" elapsed="0.003134"/>
+</kw>
+<status status="PASS" start="2025-01-07T21:28:32.251687" elapsed="0.003403"/>
+</kw>
+<kw name="E a categoria &quot;Exclusivo Prime&quot; deve ser exibida na página" owner="amazon_resources">
+<kw name="Verificar se aparece a categoria &quot;Exclusivo Prime&quot;" owner="amazon_resources">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-01-07T21:28:32.267982" level="INFO">Element '//button[@data-csa-c-type='uxElement'][contains(.,'Exclusivo Prime')]' is displayed.</msg>
+<arg>${EXCLUSIVO_PRIME}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-07T21:28:32.255638" elapsed="0.012417"/>
+</kw>
+<status status="PASS" start="2025-01-07T21:28:32.255459" elapsed="0.012670"/>
+</kw>
+<status status="PASS" start="2025-01-07T21:28:32.255257" elapsed="0.012913"/>
+</kw>
+<kw name="Fechar o navegador" owner="amazon_resources" type="TEARDOWN">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-01-07T21:28:32.408912" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-01-07T21:28:32.268708" elapsed="0.140306"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-01-07T21:28:32.409166" elapsed="2.153584"/>
+</kw>
+<status status="PASS" start="2025-01-07T21:28:32.268429" elapsed="2.294435"/>
+</kw>
+<doc>Esse teste verifica o menu eletronicos do site da Amazon.com.br
+e verifica a categoria Ofertas e Promoções</doc>
+<tag>categorias</tag>
+<tag>menus</tag>
+<status status="PASS" start="2025-01-07T21:28:20.700040" elapsed="13.862989"/>
+</test>
+<doc>Essa suite testa o site da Amazon.com</doc>
+<status status="PASS" start="2025-01-07T21:28:20.489906" elapsed="14.073784"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">categorias</stat>
+<stat pass="1" fail="0" skip="0">menus</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Amazon Testes Gherkin Bdd">Amazon Testes Gherkin Bdd</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
